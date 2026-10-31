@@ -73,6 +73,8 @@ struct FAQView: View {
                     .padding(.top, 8)
                 }
                 .padding(16)
+                .frame(maxWidth: 720)
+                .frame(maxWidth: .infinity)
             }
             .background(Theme.background.ignoresSafeArea())
             .navigationTitle("FAQ")

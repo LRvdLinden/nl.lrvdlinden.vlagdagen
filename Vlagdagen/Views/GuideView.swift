@@ -35,7 +35,7 @@ struct Guide: Identifiable {
 }
 
 struct GuideView: View {
-    @State private var selected = "hijsen"
+    @State private var selected = DemoMode.guide ?? "hijsen"
 
     var body: some View {
         NavigationStack {
@@ -76,6 +76,8 @@ struct GuideView: View {
                     }
                 }
                 .padding(16)
+                .frame(maxWidth: 720)
+                .frame(maxWidth: .infinity)
             }
             .background(Theme.background.ignoresSafeArea())
             .navigationTitle("Handleiding")

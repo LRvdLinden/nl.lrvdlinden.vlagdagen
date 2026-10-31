@@ -38,7 +38,7 @@ final class Router: ObservableObject {
 
     enum Tab: Hashable { case today, agenda, guide, faq, settings }
 
-    @Published var tab: Tab = .today
+    @Published var tab: Tab = DemoMode.tab ?? .today
     @Published var openFlagDayID: String?
 }
 

@@ -91,7 +91,7 @@ struct SettingsView: View {
             Text("Meldingen")
         } footer: {
             if settings.notificationsEnabled && status != .denied {
-                Text("Je krijgt om \(settings.notifyTimeLabel) automatisch een melding op elke vlagdag, ook als de app gesloten is. \(pendingCount) meldingen ingepland.")
+                Text("Je krijgt om \(settings.notifyTimeLabel) automatisch een melding op elke vlagdag, ook als de app gesloten is." + (pendingCount > 0 ? " \(pendingCount) meldingen ingepland." : ""))
             }
         }
     }
@@ -173,7 +173,7 @@ struct SettingsView: View {
     }
 
     private func sendTest() async {
-        guard let day = FlagCalendar.next(after: .now) else { return }
+        guard let day = FlagCalendar.next(after: DemoMode.now) else { return }
         let content = NotificationScheduler.morningContent(day)
         content.subtitle = "Testmelding"
         let request = UNNotificationRequest(
@@ -197,7 +197,8 @@ struct OnboardingView: View {
 
             VStack(spacing: 28) {
                 Spacer()
-                FlagGlyph(pennant: true, size: 120)
+                WavingTricolor(pennant: true, speed: 0.8)
+                    .frame(width: 150, height: 120)
                 VStack(spacing: 10) {
                     Text("Vlagdagen")
                         .font(Theme.display(44, weight: .bold))

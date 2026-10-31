@@ -6,7 +6,7 @@ struct AgendaView: View {
     @Environment(\.openURL) private var openURL
 
     private var years: [Int] {
-        let y = FlagCalendar.calendar.component(.year, from: .now)
+        let y = FlagCalendar.calendar.component(.year, from: DemoMode.now)
         return Array(y...(y + 2))
     }
 
@@ -20,7 +20,7 @@ struct AgendaView: View {
                 .listRowInsets(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
 
                 ForEach(years, id: \.self) { year in
-                    let today = FlagCalendar.startOfDay(.now)
+                    let today = FlagCalendar.startOfDay(DemoMode.now)
                     let days = FlagCalendar.flagDays(in: year).filter { showPast || $0.date >= today }
                     if !days.isEmpty {
                         Section {
@@ -105,7 +105,7 @@ struct FlagDayDetailView: View {
             VStack(alignment: .leading, spacing: 18) {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 6) {
-                        Text(FlagFormat.relative(FlagCalendar.daysUntil(day)).uppercased())
+                        Text(FlagFormat.relative(FlagCalendar.daysUntil(day, from: DemoMode.now)).uppercased())
                             .font(Theme.eyebrow).foregroundStyle(Theme.orange)
                         Text(day.title).font(Theme.display(28)).foregroundStyle(Theme.ink)
                         Text(FlagFormat.full.string(from: day.date).capitalizedFirst)
@@ -155,6 +155,8 @@ struct FlagDayDetailView: View {
                 .buttonStyle(.bordered)
             }
             .padding(20)
+            .frame(maxWidth: 720)
+            .frame(maxWidth: .infinity)
         }
         .background(Theme.background.ignoresSafeArea())
         .toolbar {

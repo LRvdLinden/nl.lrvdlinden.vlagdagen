@@ -8,7 +8,7 @@ struct TodayView: View {
     var body: some View {
         NavigationStack {
             TimelineView(.everyMinute) { context in
-                let now = context.date
+                let now = DemoMode.adjust(context.date)
                 let today = FlagCalendar.flagDay(on: now)
                 ScrollView {
                     VStack(spacing: 20) {
@@ -21,6 +21,8 @@ struct TodayView: View {
                     }
                     .padding(.horizontal, 16)
                     .padding(.bottom, 24)
+                    .frame(maxWidth: 720)
+                    .frame(maxWidth: .infinity)
                 }
                 .background(Theme.background.ignoresSafeArea())
             }
@@ -123,6 +125,10 @@ struct TodayView: View {
     }
 
     private func loadAdvice() async {
+        if DemoMode.isActive {
+            advice = .evaluate(wind: 14, gust: 27, precipitation: 0, code: 1, temperature: 17)
+            return
+        }
         do {
             advice = try await WeatherService.fetch()
             adviceFailed = false
@@ -174,7 +180,7 @@ struct NextFlagDayCard: View {
             }
 
             TimelineView(.periodic(from: .now, by: 1)) { context in
-                let remaining = max(0, day.date.timeIntervalSince(context.date))
+                let remaining = max(0, day.date.timeIntervalSince(DemoMode.adjust(context.date)))
                 let d = Int(remaining) / 86_400
                 let h = Int(remaining) % 86_400 / 3_600
                 let m = Int(remaining) % 3_600 / 60
@@ -246,7 +252,7 @@ struct CountdownBox: View {
 
 struct FlagDayRow: View {
     let day: FlagDay
-    var now: Date = .now
+    var now: Date = DemoMode.now
 
     var body: some View {
         HStack(spacing: 14) {

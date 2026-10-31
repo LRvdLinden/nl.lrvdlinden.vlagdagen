@@ -12,11 +12,11 @@ options:
 settings:
   base:
     MARKETING_VERSION: "2.0.0"
-    CURRENT_PROJECT_VERSION: "1"
+    CURRENT_PROJECT_VERSION: "2"
     SWIFT_VERSION: "5.10"
     DEVELOPMENT_TEAM: EU3UY476T6
     CODE_SIGN_STYLE: Automatic
-    TARGETED_DEVICE_FAMILY: "1"   # iPhone
+    TARGETED_DEVICE_FAMILY: "1,2" # iPhone + iPad
     ENABLE_USER_SCRIPT_SANDBOXING: YES
 
 targets:
@@ -41,8 +41,21 @@ targets:
         ITSAppUsesNonExemptEncryption: false
         LSApplicationCategoryType: public.app-category.reference
         UILaunchScreen:
-          UIColorName: AccentColor
-        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+          UIColorName: LaunchBackground
+        # Alle vier standen vereist voor iPad-multitasking (App Store-validatie)
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        # iPhone blijft staand
+        UISupportedInterfaceOrientations~iphone:
+          - UIInterfaceOrientationPortrait
         CFBundleURLTypes:
           - CFBundleURLName: app.lrvdlinden.vlagdagen
             CFBundleURLSchemes: [vlagdagen]
