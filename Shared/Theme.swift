@@ -6,7 +6,7 @@ enum Theme {
     static let ink = Color(light: 0x0F1829, dark: 0xF2F4F8)
     static let muted = Color(light: 0x576175, dark: 0xA3ACBD)
     static let gold = Color(hex: 0xFFBD14)
-    static let orange = Color(hex: 0xF68B1F)
+    static let orange = Color(hex: 0xFF6600)   // Nederlands oranje (wimpel)
     static let background = Color(light: 0xF2F4F8, dark: 0x0B1220)
     static let card = Color(light: 0xFFFFFF, dark: 0x16213A)
     static let heroTop = Color(hex: 0x1D3863)
