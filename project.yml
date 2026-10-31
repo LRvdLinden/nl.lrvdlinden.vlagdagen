@@ -14,7 +14,7 @@ settings:
     MARKETING_VERSION: "2.0.0"
     CURRENT_PROJECT_VERSION: "1"
     SWIFT_VERSION: "5.10"
-    DEVELOPMENT_TEAM: ""          # Vul hier je Apple Team ID in (of kies hem in Xcode)
+    DEVELOPMENT_TEAM: EU3UY476T6
     CODE_SIGN_STYLE: Automatic
     TARGETED_DEVICE_FAMILY: "1"   # iPhone
     ENABLE_USER_SCRIPT_SANDBOXING: YES
