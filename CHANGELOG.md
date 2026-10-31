@@ -2,7 +2,7 @@
 
 Alle noemenswaardige wijzigingen in de Vlagdagen-app.
 
-## [2.0.0] (build 2), november 2026
+## [2.0.0] (build 3), november 2026
 
 Een volledig nieuwe app, vanaf nul opnieuw gebouwd in SwiftUI. Ten opzichte van versie 1.0.1:
 

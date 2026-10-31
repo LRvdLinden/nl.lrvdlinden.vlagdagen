@@ -12,7 +12,7 @@ options:
 settings:
   base:
     MARKETING_VERSION: "2.0.0"
-    CURRENT_PROJECT_VERSION: "2"
+    CURRENT_PROJECT_VERSION: "3"
     SWIFT_VERSION: "5.10"
     DEVELOPMENT_TEAM: EU3UY476T6
     CODE_SIGN_STYLE: Automatic
@@ -53,9 +53,6 @@ targets:
           - UIInterfaceOrientationPortraitUpsideDown
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
-        # iPhone blijft staand
-        UISupportedInterfaceOrientations~iphone:
-          - UIInterfaceOrientationPortrait
         CFBundleURLTypes:
           - CFBundleURLName: app.lrvdlinden.vlagdagen
             CFBundleURLSchemes: [vlagdagen]
