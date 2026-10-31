@@ -40,10 +40,10 @@ final class AppSettings: ObservableObject {
     /// Tijd van de ochtendmelding, als Date (alleen uur en minuut tellen).
     var notifyTime: Date {
         get {
-            FlagCalendar.calendar.date(bySettingHour: notifyHour, minute: notifyMinute, second: 0, of: Date()) ?? Date()
+            Calendar.current.date(bySettingHour: notifyHour, minute: notifyMinute, second: 0, of: Date()) ?? Date()
         }
         set {
-            let c = FlagCalendar.calendar.dateComponents([.hour, .minute], from: newValue)
+            let c = Calendar.current.dateComponents([.hour, .minute], from: newValue)
             notifyHour = c.hour ?? 8
             notifyMinute = c.minute ?? 0
         }

@@ -92,10 +92,10 @@ final class AppSettingsTests: XCTestCase {
         let settings = AppSettings()
         settings.notifyHour = 8
         settings.notifyMinute = 0
-        let c = FlagCalendar.calendar.dateComponents([.hour, .minute], from: settings.notifyTime)
+        let c = Calendar.current.dateComponents([.hour, .minute], from: settings.notifyTime)
         XCTAssertEqual(c.hour, 8)
         XCTAssertEqual(c.minute, 0)
-        settings.notifyTime = FlagCalendar.calendar.date(bySettingHour: 7, minute: 30, second: 0, of: Date())!
+        settings.notifyTime = Calendar.current.date(bySettingHour: 7, minute: 30, second: 0, of: Date())!
         XCTAssertEqual(settings.notifyHour, 7)
         XCTAssertEqual(settings.notifyMinute, 30)
         settings.notifyHour = 8
