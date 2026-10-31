@@ -12,6 +12,7 @@
 		14DF3E40AD6C211A9B15FC89 /* VlagdagenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514C5045AD8BDC447D9D8CD /* VlagdagenApp.swift */; };
 		19005940790936E54A658814 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398BDBB242A14007B7BFC31 /* AppSettings.swift */; };
 		250DC05FF63527C16B31BE55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A96A3DB08B504377775B08 /* SettingsView.swift */; };
+		2C4BA5C9ACA09E9D2ABADB5F /* WavingFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD1F5E81C66F990E51CB87A /* WavingFlag.swift */; };
 		370535F13D322DE933A83BF5 /* FlagCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F0047E99BAA08C4D567FB /* FlagCalendarTests.swift */; };
 		3F01BD4B32DF441D4F780581 /* VlagdagenWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD52390CEFCCACA28C663FF6 /* VlagdagenWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		46910EB0F1ACB006C3549BD4 /* AgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF65223B3FCA06A4C3A40E /* AgendaView.swift */; };
@@ -23,6 +24,8 @@
 		76B62D9E652BA1690B77B5B7 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77C2AD9C6281F548B5FF260 /* NotificationScheduler.swift */; };
 		78F11B141DEF1EC4F0FEF865 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1661D47C518E4798E28DE8BE /* GuideView.swift */; };
 		8E42B0EFC39227F26C216ECF /* CalendarSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4533A016712F6EFEF639F879 /* CalendarSubscription.swift */; };
+		983F29987841467BB481A5C5 /* WavingFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD1F5E81C66F990E51CB87A /* WavingFlag.swift */; };
+		B9A160AD1D810788F2FA741B /* DemoMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB1E339FD9452EAE9499B /* DemoMode.swift */; };
 		C3B90DB8F670304BE4FFA793 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842CC0CEAF985F9CBCD1429 /* Theme.swift */; };
 		D90AACA63525E04AF762EF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A462B6B02F64E682CABB3369 /* Assets.xcassets */; };
 		D9AC6076D4B0E4E0AF1F8989 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656124499A74E11A5BBFEDFB /* TodayView.swift */; };
@@ -63,6 +66,7 @@
 		1661D47C518E4798E28DE8BE /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		4533A016712F6EFEF639F879 /* CalendarSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSubscription.swift; sourceTree = "<group>"; };
 		48A96A3DB08B504377775B08 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5AD1F5E81C66F990E51CB87A /* WavingFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavingFlag.swift; sourceTree = "<group>"; };
 		656124499A74E11A5BBFEDFB /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		7842CC0CEAF985F9CBCD1429 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		81AF65223B3FCA06A4C3A40E /* AgendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		D4CA1A705639AE5C46BBF4DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DE9F0047E99BAA08C4D567FB /* FlagCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCalendarTests.swift; sourceTree = "<group>"; };
 		E11316E0EA0B9449369EB77F /* VlagdagenTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VlagdagenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1AEB1E339FD9452EAE9499B /* DemoMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMode.swift; sourceTree = "<group>"; };
 		E3E4E2D82DFB903993AB579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E77C2AD9C6281F548B5FF260 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 		EDD1EF8330B64F2266A0F3FC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -131,6 +136,7 @@
 				9398BDBB242A14007B7BFC31 /* AppSettings.swift */,
 				A462B6B02F64E682CABB3369 /* Assets.xcassets */,
 				4533A016712F6EFEF639F879 /* CalendarSubscription.swift */,
+				E1AEB1E339FD9452EAE9499B /* DemoMode.swift */,
 				E3E4E2D82DFB903993AB579B /* Info.plist */,
 				E77C2AD9C6281F548B5FF260 /* NotificationScheduler.swift */,
 				F514C5045AD8BDC447D9D8CD /* VlagdagenApp.swift */,
@@ -145,6 +151,7 @@
 			children = (
 				CF5C4D2AB29DE7B9908D5610 /* FlagDays.swift */,
 				7842CC0CEAF985F9CBCD1429 /* Theme.swift */,
+				5AD1F5E81C66F990E51CB87A /* WavingFlag.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -288,6 +295,7 @@
 				46910EB0F1ACB006C3549BD4 /* AgendaView.swift in Sources */,
 				19005940790936E54A658814 /* AppSettings.swift in Sources */,
 				8E42B0EFC39227F26C216ECF /* CalendarSubscription.swift in Sources */,
+				B9A160AD1D810788F2FA741B /* DemoMode.swift in Sources */,
 				5E3ADE3400545E8E22FBE00F /* FAQView.swift in Sources */,
 				53E6FF50026B3D44F176AEC2 /* FlagDays.swift in Sources */,
 				78F11B141DEF1EC4F0FEF865 /* GuideView.swift in Sources */,
@@ -297,6 +305,7 @@
 				56006211BCBEF009802DB1AA /* Theme.swift in Sources */,
 				D9AC6076D4B0E4E0AF1F8989 /* TodayView.swift in Sources */,
 				14DF3E40AD6C211A9B15FC89 /* VlagdagenApp.swift in Sources */,
+				983F29987841467BB481A5C5 /* WavingFlag.swift in Sources */,
 				0A96BFF17DA9D7F83EDB478E /* WeatherAdvice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +317,7 @@
 				0C1E1833144464CF08E2099D /* FlagDays.swift in Sources */,
 				C3B90DB8F670304BE4FFA793 /* Theme.swift in Sources */,
 				481CAD50F0BDA927DE4A08D7 /* VlagdagenWidget.swift in Sources */,
+				2C4BA5C9ACA09E9D2ABADB5F /* WavingFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +458,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -478,7 +488,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.10;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -535,7 +545,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -558,7 +568,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.10;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
