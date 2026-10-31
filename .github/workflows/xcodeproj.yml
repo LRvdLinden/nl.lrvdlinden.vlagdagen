@@ -1,0 +1,26 @@
+name: Xcode-project bijwerken
+
+# Genereert Vlagdagen.xcodeproj met XcodeGen en zet het in de repo,
+# zodat je het project direct in Xcode kunt openen.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [project.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install xcodegen
+      - run: xcodegen generate
+      - name: Commit project
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f Vlagdagen.xcodeproj Vlagdagen/Info.plist VlagdagenWidget/Info.plist
+          git diff --cached --quiet || (git commit -m "Xcode-project gegenereerd met XcodeGen" && git push)
