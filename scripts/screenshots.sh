@@ -28,7 +28,7 @@ shoot() { # device-dir udid naam args...
   xcrun simctl terminate "$udid" "$BUNDLE" >/dev/null 2>&1 || true
   xcrun simctl launch "$udid" "$BUNDLE" -AppleLanguages "(nl)" -AppleLocale nl_NL -skipSplash YES "$@" >/dev/null
   sleep 5
-  xcrun simctl io "$udid" screenshot --type=png "$OUT/$dir/$name.png" >/dev/null
+  xcrun simctl io "$udid" screenshot --type=png "$OUT/$dir/$name.png"
   echo "  $dir/$name"
 }
 
