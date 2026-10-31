@@ -1,0 +1,24 @@
+name: iOS build & tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate Xcode project
+        run: xcodegen generate
+      - name: Build and test
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project Vlagdagen.xcodeproj \
+            -scheme Vlagdagen \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            CODE_SIGNING_ALLOWED=NO | tail -n 120

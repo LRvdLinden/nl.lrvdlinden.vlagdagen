@@ -1,0 +1,10 @@
+# Xcode
+*.xcodeproj
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+.DS_Store
+# Gegenereerd door XcodeGen
+Vlagdagen/Info.plist
+VlagdagenWidget/Info.plist
