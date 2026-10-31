@@ -219,7 +219,7 @@ def banner(W, H, shot_path, name):
     glow(img, W * 0.75, H * 0.2, H * 0.8, (0x34, 0x63, 0xAE), 90)
     glow(img, W * 0.05, H * 1.0, H * 0.9, (0x3A, 0x6B, 0xB8), 80)
     d = ImageDraw.Draw(img)
-    s = H / 1280
+    s = min(H / 1280, W / 1900)
     wide = W / H > 2
 
     # Links: icoon + tekst
@@ -249,10 +249,11 @@ def banner(W, H, shot_path, name):
     d.text((left + 32 * s, ty + 16 * s), pill, font=f_pill, fill=(255, 255, 255))
 
     # Rechts: wapperende vlag + telefoon
-    tricolor_ribbon(img, W * (0.66 if not wide else 0.70), H * 0.40, H * 0.62, H * 0.33, H * 0.035)
+    fw = min(H * 0.62, W * 0.36)
+    tricolor_ribbon(img, W * 0.70, H * 0.40, fw, fw * 0.53, fw * 0.056)
     shot = Image.open(shot_path).convert("RGB")
-    dev_w = int(H * 0.42)
-    dev_x = int(W * (0.80 if not wide else 0.84) - dev_w / 2)
+    dev_w = int(min(H * 0.42, W * 0.2))
+    dev_x = int(W * 0.84 - dev_w / 2)
     dev_y = int(H * 0.30)
     device(img, shot, dev_x, dev_y, dev_w, "iphone")
     out = os.path.join(OUT, "promo", name)
