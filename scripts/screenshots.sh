@@ -40,6 +40,12 @@ for spec in "iphone:iPhone 16 Pro" "ipad:iPad Pro 13-inch"; do
   mkdir -p "$OUT/$dir"
   xcrun simctl boot "$udid" 2>/dev/null || true
   xcrun simctl bootstatus "$udid" -b >/dev/null
+  # Systeemtaal Nederlands (ook de datum in de statusbalk van de iPad)
+  xcrun simctl spawn "$udid" defaults write -g AppleLanguages -array nl
+  xcrun simctl spawn "$udid" defaults write -g AppleLocale -string nl_NL
+  xcrun simctl shutdown "$udid"
+  xcrun simctl boot "$udid"
+  xcrun simctl bootstatus "$udid" -b >/dev/null
   xcrun simctl ui "$udid" appearance light
   xcrun simctl status_bar "$udid" override --time "9:41" --dataNetwork wifi --wifiMode active --wifiBars 3 \
     --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100
