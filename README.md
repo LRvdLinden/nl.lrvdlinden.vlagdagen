@@ -10,11 +10,12 @@
 |---|---|
 | Bundle ID | `app.lrvdlinden.vlagdagen` |
 | Widget | `app.lrvdlinden.vlagdagen.widget` |
-| Versie | 2.0.0 (build 1) |
-| Minimaal | iOS 17 · iPhone |
+| Versie | 2.0.0 (build 2) |
+| Minimaal | iOS 17 · iPhone en iPad |
 
 ## Functies
 
+- **Geanimeerd openingsscherm**: de vlag wordt gehesen, wappert en krijgt de wimpel
 - **Vandaag**: groot *Ja.* of *Nee.*, met de juiste instructie (in top, met wimpel, of halfstok tot zonsondergang)
 - **Aftelklok** tot de volgende vlagdag
 - **Ochtendmelding**: automatisch op elke vlagdag, op een zelfgekozen tijd (standaard 08:00). Optioneel ook de avond ervoor, en op 4 mei een herinnering om 17:45 om de vlag halfstok te hijsen. Per vlagdag aan of uit te zetten.
@@ -65,6 +66,15 @@ De app abonneert op `webcal://vlagdagen.nl/api/functions/generateFlagDaysICS`.
 - Juiste datums. Nu staan Veteranendag op 28-06 en Prinsjesdag op 16-09; dat moet 27-06 en 15-09 zijn.
 - Geldige iCal-regels: CRLF-regeleinden, `DTEND`, gevouwen lange regels en vaste `UID`'s.
 - `REFRESH-INTERVAL` van één dag.
+
+## App Store
+
+- Teksten (NL): `AppStore/metadata-nl.md`, met beschrijving, wat is nieuw, promotietekst en trefwoorden
+- Wijzigingen: `CHANGELOG.md`
+- Screenshots: `scripts/screenshots.sh` (simulator, demo-modus) en daarna `python3 scripts/compose_appstore.py <fonts>`
+  - iPhone 6,3": `AppStore/screenshots/iphone-6.3` (1206 × 2622)
+  - iPad 13": `AppStore/screenshots/ipad-13` (2064 × 2752)
+  - Promobanners: `AppStore/promo` (5244 × 2950, 3840 × 1646, 3840 × 2560, 1920 × 1280)
 
 ## Structuur
 
