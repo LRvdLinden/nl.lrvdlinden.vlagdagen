@@ -102,3 +102,29 @@ final class AppSettingsTests: XCTestCase {
         settings.notifyMinute = 0
     }
 }
+
+final class ReviewPrompterTests: XCTestCase {
+    let start = Date(timeIntervalSince1970: 1_800_000_000)
+
+    func testNotBeforeFourHours() {
+        XCTAssertFalse(ReviewPrompter.isDue(now: start, firstUse: nil, lastPrompt: nil))
+        XCTAssertFalse(ReviewPrompter.isDue(now: start.addingTimeInterval(3 * 3600 + 3599), firstUse: start, lastPrompt: nil))
+        XCTAssertTrue(ReviewPrompter.isDue(now: start.addingTimeInterval(4 * 3600), firstUse: start, lastPrompt: nil))
+    }
+
+    func testAtMostOncePerWeek() {
+        let asked = start.addingTimeInterval(5 * 3600)
+        XCTAssertFalse(ReviewPrompter.isDue(now: asked.addingTimeInterval(6 * 86_400), firstUse: start, lastPrompt: asked))
+        XCTAssertTrue(ReviewPrompter.isDue(now: asked.addingTimeInterval(7 * 86_400), firstUse: start, lastPrompt: asked))
+    }
+
+    func testRegisterFirstUseOnlyOnce() {
+        let defaults = UserDefaults(suiteName: "review-test")!
+        defaults.removePersistentDomain(forName: "review-test")
+        ReviewPrompter.registerFirstUse(now: start, defaults: defaults)
+        ReviewPrompter.registerFirstUse(now: start.addingTimeInterval(86_400), defaults: defaults)
+        XCTAssertTrue(ReviewPrompter.isDue(now: start.addingTimeInterval(4 * 3600), defaults: defaults))
+        ReviewPrompter.markPrompted(now: start.addingTimeInterval(4 * 3600), defaults: defaults)
+        XCTAssertFalse(ReviewPrompter.isDue(now: start.addingTimeInterval(5 * 3600), defaults: defaults))
+    }
+}

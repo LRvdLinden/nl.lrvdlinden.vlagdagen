@@ -2,6 +2,14 @@
 
 Alle noemenswaardige wijzigingen in de Vlagdagen-app.
 
+## [2.0.1] (build 4), november 2026
+
+### Nieuw
+- **Vraag om een beoordeling**: de app vraagt op een rustig moment om een App Store-beoordeling.
+  - De eerste keer pas 4 uur na het eerste gebruik op dat apparaat.
+  - Daarna hoogstens één keer per week (iOS toont het venster sowieso maximaal 3 keer per jaar).
+  - Nooit tijdens het openings- of welkomstscherm, en niet als er een venster openstaat.
+
 ## [2.0.0] (build 3), november 2026
 
 Een volledig nieuwe app, vanaf nul opnieuw gebouwd in SwiftUI. Ten opzichte van versie 1.0.1:

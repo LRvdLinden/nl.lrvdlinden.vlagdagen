@@ -1,4 +1,4 @@
-# App Store-teksten: Vlagdagen 2.0.0 (Nederlands)
+# App Store-teksten: Vlagdagen 2.0.1 (Nederlands)
 
 Kopieer per veld naar App Store Connect. Tussen haakjes staat de limiet en de huidige lengte.
 
@@ -24,7 +24,15 @@ Nieuw: Vlagdagen 2.0! Een ochtendmelding op elke vlagdag, een aftelklok, widgets
 vlag,vlaggen,koningsdag,wimpel,halfstok,dodenherdenking,bevrijdingsdag,vlaginstructie,veteranendag
 ```
 
-## Wat is er nieuw in deze versie (2.0.0)
+## Wat is er nieuw in deze versie (2.0.1)
+```
+Bedankt voor het gebruiken van Vlagdagen!
+
+• Vind je de app handig? Je kunt nu makkelijk een beoordeling achterlaten. We vragen het hoogstens één keer per week, en nooit op een onhandig moment.
+• Kleine verbeteringen en bugfixes.
+```
+
+## Wat is er nieuw in versie 2.0.0
 ```
 Vlagdagen 2.0 is een compleet nieuwe app!
 

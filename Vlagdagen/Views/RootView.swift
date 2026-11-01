@@ -1,8 +1,11 @@
+import StoreKit
 import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject private var settings: AppSettings
     @EnvironmentObject private var router: Router
+    @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.requestReview) private var requestReview
     @State private var showSplash = !DemoMode.skipSplash
 
     var body: some View {
@@ -32,7 +35,25 @@ struct RootView: View {
         }
         .task {
             if let id = DemoMode.flagDayID { router.openFlagDayID = id }
+            ReviewPrompter.registerFirstUse()
         }
+        // Beoordelingsverzoek: alleen op een rustig moment, een paar seconden na het openen
+        .task(id: "\(scenePhase)-\(showSplash)-\(settings.hasOnboarded)") {
+            await askForReviewIfDue()
+        }
+    }
+
+    private func askForReviewIfDue() async {
+        guard !DemoMode.isActive,
+              scenePhase == .active,
+              !showSplash,
+              settings.hasOnboarded,
+              ReviewPrompter.isDue() else { return }
+        // Wacht even; als de app intussen naar de achtergrond gaat, wordt deze taak geannuleerd.
+        guard (try? await Task.sleep(for: ReviewPrompter.settleDelay)) != nil else { return }
+        guard scenePhase == .active, router.openFlagDayID == nil, ReviewPrompter.isDue() else { return }
+        ReviewPrompter.markPrompted()
+        requestReview()
     }
 
     private var tabs: some View {
