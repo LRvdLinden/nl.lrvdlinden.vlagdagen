@@ -12,6 +12,7 @@
 		14DF3E40AD6C211A9B15FC89 /* VlagdagenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514C5045AD8BDC447D9D8CD /* VlagdagenApp.swift */; };
 		19005940790936E54A658814 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398BDBB242A14007B7BFC31 /* AppSettings.swift */; };
 		250DC05FF63527C16B31BE55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A96A3DB08B504377775B08 /* SettingsView.swift */; };
+		2583864751A6011107B6D498 /* ReviewPrompter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385C9EE5CF46BD2FB3EF745 /* ReviewPrompter.swift */; };
 		2C4BA5C9ACA09E9D2ABADB5F /* WavingFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD1F5E81C66F990E51CB87A /* WavingFlag.swift */; };
 		370535F13D322DE933A83BF5 /* FlagCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F0047E99BAA08C4D567FB /* FlagCalendarTests.swift */; };
 		3F01BD4B32DF441D4F780581 /* VlagdagenWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD52390CEFCCACA28C663FF6 /* VlagdagenWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -68,6 +69,7 @@
 		48A96A3DB08B504377775B08 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5AD1F5E81C66F990E51CB87A /* WavingFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavingFlag.swift; sourceTree = "<group>"; };
 		656124499A74E11A5BBFEDFB /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		7385C9EE5CF46BD2FB3EF745 /* ReviewPrompter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPrompter.swift; sourceTree = "<group>"; };
 		7842CC0CEAF985F9CBCD1429 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		81AF65223B3FCA06A4C3A40E /* AgendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaView.swift; sourceTree = "<group>"; };
 		9398BDBB242A14007B7BFC31 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				E1AEB1E339FD9452EAE9499B /* DemoMode.swift */,
 				E3E4E2D82DFB903993AB579B /* Info.plist */,
 				E77C2AD9C6281F548B5FF260 /* NotificationScheduler.swift */,
+				7385C9EE5CF46BD2FB3EF745 /* ReviewPrompter.swift */,
 				F514C5045AD8BDC447D9D8CD /* VlagdagenApp.swift */,
 				FCBAFBBDC36A6FD4CCA93B19 /* WeatherAdvice.swift */,
 				28487DEA622974B9AA4B2BD2 /* Views */,
@@ -300,6 +303,7 @@
 				53E6FF50026B3D44F176AEC2 /* FlagDays.swift in Sources */,
 				78F11B141DEF1EC4F0FEF865 /* GuideView.swift in Sources */,
 				76B62D9E652BA1690B77B5B7 /* NotificationScheduler.swift in Sources */,
+				2583864751A6011107B6D498 /* ReviewPrompter.swift in Sources */,
 				631BC6A6960DFC92C39F906C /* RootView.swift in Sources */,
 				250DC05FF63527C16B31BE55 /* SettingsView.swift in Sources */,
 				56006211BCBEF009802DB1AA /* Theme.swift in Sources */,
@@ -458,7 +462,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -479,7 +483,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -545,7 +549,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -560,7 +564,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
