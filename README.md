@@ -10,7 +10,7 @@
 |---|---|
 | Bundle ID | `app.lrvdlinden.vlagdagen` |
 | Widget | `app.lrvdlinden.vlagdagen.widget` |
-| Versie | 2.0.1 (build 5) |
+| Versie | 2.0.1 (build 6) |
 | Minimaal | iOS 17 · iPhone en iPad |
 
 ## Functies

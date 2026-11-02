@@ -173,7 +173,7 @@ struct SettingsView: View {
                 .listRowInsets(EdgeInsets())
                 .listRowBackground(Color.clear)
         } header: {
-            Text("Ontdekken")
+            Text(MoreAppsText.current.section)
         }
     }
 
@@ -269,63 +269,5 @@ struct OnboardingView: View {
                 Text(text).font(.subheadline).foregroundStyle(.white.opacity(0.7))
             }
         }
-    }
-}
-
-// MARK: - Meer apps van de ontwikkelaar
-
-struct MoreAppsCard: View {
-    static let url = URL(string: "https://lrvdlinden.app")!
-
-    var body: some View {
-        Link(destination: Self.url) {
-            HStack(spacing: 14) {
-                // Icoon in Vlagdagen-kleuren: navy naar Nederlands oranje
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(LinearGradient(colors: [Theme.heroTop, Theme.orange],
-                                         startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .frame(width: 60, height: 60)
-                    .overlay(
-                        Image(systemName: "square.grid.2x2.fill")
-                            .font(.system(size: 26, weight: .semibold))
-                            .foregroundStyle(.white)
-                    )
-                    .shadow(color: Theme.orange.opacity(0.25), radius: 8, y: 4)
-
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Meer apps van de ontwikkelaar")
-                        .font(.headline)
-                        .foregroundStyle(Theme.navy)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text("Apps voor iPhone, iPad, Apple TV en Homey")
-                        .font(.subheadline)
-                        .foregroundStyle(Theme.muted)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .multilineTextAlignment(.leading)
-
-                Spacer(minLength: 8)
-
-                VStack(alignment: .trailing, spacing: 2) {
-                    Text("Bekijk")
-                        .font(.headline)
-                        .foregroundStyle(Theme.orange)
-                    Text("lrvdlinden.app")
-                        .font(.caption)
-                        .foregroundStyle(Theme.muted)
-                }
-            }
-            .padding(16)
-            .background(Theme.card, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .strokeBorder(Theme.gold.opacity(0.35), lineWidth: 1)
-            )
-            .contentShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-        }
-        .buttonStyle(.plain)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("Meer apps van de ontwikkelaar, apps voor iPhone, iPad, Apple TV en Homey")
-        .accessibilityHint("Opent lrvdlinden.app")
     }
 }
