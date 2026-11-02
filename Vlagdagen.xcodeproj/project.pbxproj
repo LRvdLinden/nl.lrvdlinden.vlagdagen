@@ -24,6 +24,7 @@
 		631BC6A6960DFC92C39F906C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD1EF8330B64F2266A0F3FC /* RootView.swift */; };
 		76B62D9E652BA1690B77B5B7 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77C2AD9C6281F548B5FF260 /* NotificationScheduler.swift */; };
 		78F11B141DEF1EC4F0FEF865 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1661D47C518E4798E28DE8BE /* GuideView.swift */; };
+		7927C1D1F4707E1DD552C509 /* MoreAppsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF012896425736AD8D1A4F /* MoreAppsCard.swift */; };
 		8E42B0EFC39227F26C216ECF /* CalendarSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4533A016712F6EFEF639F879 /* CalendarSubscription.swift */; };
 		983F29987841467BB481A5C5 /* WavingFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD1F5E81C66F990E51CB87A /* WavingFlag.swift */; };
 		B9A160AD1D810788F2FA741B /* DemoMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB1E339FD9452EAE9499B /* DemoMode.swift */; };
@@ -74,6 +75,7 @@
 		81AF65223B3FCA06A4C3A40E /* AgendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaView.swift; sourceTree = "<group>"; };
 		9398BDBB242A14007B7BFC31 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		A462B6B02F64E682CABB3369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFDF012896425736AD8D1A4F /* MoreAppsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAppsCard.swift; sourceTree = "<group>"; };
 		B514860BB554C55423F20493 /* VlagdagenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VlagdagenWidget.swift; sourceTree = "<group>"; };
 		CA348F28108705A429341AA4 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		CF5C4D2AB29DE7B9908D5610 /* FlagDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDays.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				81AF65223B3FCA06A4C3A40E /* AgendaView.swift */,
 				CA348F28108705A429341AA4 /* FAQView.swift */,
 				1661D47C518E4798E28DE8BE /* GuideView.swift */,
+				AFDF012896425736AD8D1A4F /* MoreAppsCard.swift */,
 				EDD1EF8330B64F2266A0F3FC /* RootView.swift */,
 				48A96A3DB08B504377775B08 /* SettingsView.swift */,
 				656124499A74E11A5BBFEDFB /* TodayView.swift */,
@@ -302,6 +305,7 @@
 				5E3ADE3400545E8E22FBE00F /* FAQView.swift in Sources */,
 				53E6FF50026B3D44F176AEC2 /* FlagDays.swift in Sources */,
 				78F11B141DEF1EC4F0FEF865 /* GuideView.swift in Sources */,
+				7927C1D1F4707E1DD552C509 /* MoreAppsCard.swift in Sources */,
 				76B62D9E652BA1690B77B5B7 /* NotificationScheduler.swift in Sources */,
 				2583864751A6011107B6D498 /* ReviewPrompter.swift in Sources */,
 				631BC6A6960DFC92C39F906C /* RootView.swift in Sources */,
@@ -462,7 +466,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -549,7 +553,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = EU3UY476T6;
 				ENABLE_NS_ASSERTIONS = NO;
