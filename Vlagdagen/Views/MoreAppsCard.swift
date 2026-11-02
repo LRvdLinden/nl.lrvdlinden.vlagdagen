@@ -109,7 +109,7 @@ struct MoreAppsText {
 
     /// Volgt de taal waarin de app draait (de talen die de app ondersteunt), anders Engels.
     static var current: MoreAppsText {
-        let code = Bundle.main.preferredLocalizations.first ?? "nl"
+        let code = Bundle.main.preferredLocalizations.first ?? "en"
         let lang = String(code.prefix(2)) == "nb" ? "no" : String(code.prefix(2))
         return all[lang] ?? all["en"]!
     }
