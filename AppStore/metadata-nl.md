@@ -29,6 +29,7 @@ vlag,vlaggen,koningsdag,wimpel,halfstok,dodenherdenking,bevrijdingsdag,vlaginstr
 Bedankt voor het gebruiken van Vlagdagen!
 
 • Vind je de app handig? Je kunt nu makkelijk een beoordeling achterlaten. We vragen het hoogstens één keer per week, en nooit op een onhandig moment.
+• Nieuw onder Instellingen: ontdek meer apps van de ontwikkelaar.
 • Kleine verbeteringen en bugfixes.
 ```
 

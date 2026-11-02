@@ -2,9 +2,10 @@
 
 Alle noemenswaardige wijzigingen in de Vlagdagen-app.
 
-## [2.0.1] (build 4), november 2026
+## [2.0.1] (build 5), november 2026
 
 ### Nieuw
+- **Ontdekken**: onderaan in Instellingen een kaart *Meer apps van de ontwikkelaar*, die naar lrvdlinden.app leidt.
 - **Vraag om een beoordeling**: de app vraagt op een rustig moment om een App Store-beoordeling.
   - De eerste keer pas 4 uur na het eerste gebruik op dat apparaat.
   - Daarna hoogstens één keer per week (iOS toont het venster sowieso maximaal 3 keer per jaar).
